@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As Doutrinas Mobroh - Confiança e Transparência</title>
+    <style>
+        :root {
+            --primary-blue: #2E5FCC;
+            --secondary-blue: #4A90E2;
+            --accent-teal: #14B8A6;
+            --dark-navy: #1E3A5F;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --bg-light: #F7FAFC;
+            --border-light: #E2E8F0;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--white);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 2.5rem 0;
+            border-bottom: 4px solid var(--accent-teal);
+        }
+        
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .logo-container {
+            flex-shrink: 0;
+        }
+        
+        .logo-container svg {
+            width: 80px;
+            height: 80px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+        }
+        
+        .header-text h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 0.9rem;
+            font-weight: 400;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .doctrine-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-light);
+        }
+        
+        .doctrine-header h2 {
+            color: var(--dark-navy);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .doctrine-header .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+        
+        /* Principles */
+        .principle {
+            margin-bottom: 2.5rem;
+            padding-left: 1.5rem;
+            border-left: 4px solid var(--accent-teal);
+            position: relative;
+        }
+        
+        .principle-number {
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            background: var(--accent-teal);
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transform: translateX(-50%);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .principle h3 {
+            color: var(--dark-navy);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            font-weight: 600;
+        }
+        
+        .principle-content {
+            margin-left: 1rem;
+        }
+        
+        .principle p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        .principle ul {
+            list-style: none;
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .principle li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        
+        .principle li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
+            font-weight: bold;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #EDF2F7 100%);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .highlight-box strong {
+            color: var(--primary-blue);
+        }
+        
+        /* Final Rule Special Styling */
+        .final-rule {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--primary-blue) 100%);
+            color: white;
+            border-left: none;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .final-rule .principle-number {
+            background: var(--accent-teal);
+            left: 50%;
+            top: -1.25rem;
+            transform: translateX(-50%);
+        }
+        
+        .final-rule h3 {
+            color: white;
+            text-align: center;
+            margin-left: 0;
+            margin-top: 0.5rem;
+            font-size: 1.4rem;
+        }
+        
+        .final-rule .principle-content {
+            margin-left: 0;
+        }
+        
+        .final-rule ul {
+            list-style: none;
+        }
+        
+        .final-rule li {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .final-rule li::before {
+            content: "✕";
+            color: #FC8181;
+        }
+        
+        .final-rule .highlight-box {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        .final-rule .highlight-box strong {
+            color: var(--accent-teal);
+        }
+        
+        /* Closing Statement */
+        .closing {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: var(--dark-navy);
+            font-weight: 500;
+            border-top: 2px solid var(--border-light);
+        }
+        
+        .closing strong {
+            color: var(--primary-blue);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-tagline {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            main {
+                padding: 2rem 1.5rem;
+            }
+            
+            .principle {
+                padding-left: 1rem;
+            }
+            
+            .principle-number {
+                width: 2rem;
+                height: 2rem;
+                font-size: 0.9rem;
+                left: -1rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            header {
+                background: white !important;
+                color: black !important;
+                border-bottom: 2px solid #333;
+            }
+            
+            .logo-container svg {
+                filter: none;
+            }
+            
+            .final-rule {
+                background: white !important;
+                color: black !important;
+                border: 2px solid #333;
+            }
+            
+            .final-rule h3 {
+                color: black !important;
+            }
+            
+            .final-rule li {
+                color: black !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <svg viewBox="90 85 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="blueGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#2E5FCC;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="blueGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#5B9FED;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3D7BD9;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#2DD4BF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(150, 150)">
+                        <path d="M -40 30 L 0 50 L 40 30 L 0 10 Z" fill="url(#greenGrad)" opacity="0.9"/>
+                        <path d="M -50 0 L -10 20 L 30 0 L -10 -20 Z" fill="url(#blueGrad1)" opacity="0.85"/>
+                        <path d="M 10 0 L 50 20 L 50 -20 L 10 -40 Z" fill="url(#blueGrad2)" opacity="0.85"/>
+                        <circle cx="0" cy="-45" r="8" fill="url(#blueGrad1)"/>
+                        <path d="M -3 -45 L 0 -60 L 3 -45" fill="url(#blueGrad2)" stroke="none"/>
+                        <line x1="-35" y1="15" x2="0" y2="-30" stroke="url(#blueGrad1)" stroke-width="2" opacity="0.4"/>
+                        <line x1="35" y1="15" x2="0" y2="-30" stroke="url(#blueGrad2)" stroke-width="2" opacity="0.4"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="header-text">
+                <h1>Mobroh</h1>
+                <p class="tagline">Confiança e Transparência</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="doctrine-header">
+            <h2>As Doutrinas Mobroh</h2>
+            <p class="subtitle">Design Doctrine</p>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">1</div>
+            <h3>Princípio Fundamental</h3>
+            <div class="principle-content">
+                <p>Mobroh existe para resolver problemas reais com o mínimo de fricção cognitiva possível. Não competimos por poder computacional, superioridade técnica percebida ou espetáculo tecnológico. Competimos por qualidade, eficiência e confiança.</p>
+                <div class="highlight-box">
+                    <strong>Ferramentas Mobroh devem desaparecer no uso.</strong> Se chamam atenção, falharam.
+                </div>
+            </div>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">2</div>
+            <h3>Honestidade Tecnológica (Regra Zero)</h3>
+            <div class="principle-content">
+                <p>Mobroh nunca fará marketing enganoso.</p>
+                <ul>
+                    <li>Não chamamos sistemas determinísticos de IA.</li>
+                    <li>Não prometemos inteligência onde há automação.</li>
+                    <li>Não simulamos capacidades humanas.</li>
+                </ul>
+                <p>Cada funcionalidade deve ser explicável em termos simples e auditáveis. Se algo não pode ser explicado, não entra no produto.</p>
+            </div>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">3</div>
+            <h3>Calm Tech e Low Cognitive Load</h3>
+            <div class="principle-content">
+                <p>Todo sistema Mobroh deve:</p>
+                <ul>
+                    <li>Reduzir cliques</li>
+                    <li>Reduzir decisões repetitivas</li>
+                    <li>Reduzir interrupções</li>
+                    <li>Reduzir ambiguidade</li>
+                </ul>
+                <p>O utilizador não deve pensar como usar o sistema, apenas no que está a fazer. Interfaces não competem por atenção. Servem o fluxo de trabalho.</p>
+            </div>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">4</div>
+            <h3>Inteligência Suficiente, Não Máxima</h3>
+            <div class="principle-content">
+                <p>Mobroh adota reconhecimento superficial de padrões como base.</p>
+                <ul>
+                    <li>Não usamos deep learning como núcleo</li>
+                    <li>Não dependemos de modelos opacos</li>
+                    <li>Não aceitamos comportamento imprevisível</li>
+                </ul>
+                <p>Resolvemos os 80% mais comuns com soluções simples, rápidas e verificáveis. Os 20% restantes devem falhar de forma clara e pedir intervenção humana.</p>
+            </div>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">5</div>
+            <h3>Falhar Bem é Obrigatório</h3>
+            <div class="principle-content">
+                <p>Falhas devem ser:</p>
+                <ul>
+                    <li>Visíveis</li>
+                    <li>Explicáveis</li>
+                    <li>Recuperáveis</li>
+                </ul>
+                <p>Nunca mascaradas. Nunca "alucinadas". Um erro claro gera mais confiança do que uma resposta errada convincente.</p>
+            </div>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">6</div>
+            <h3>Offline-First por Defeito</h3>
+            <div class="principle-content">
+                <p>Sistemas Mobroh devem funcionar:</p>
+                <ul>
+                    <li>Sem internet</li>
+                    <li>Em hardware modesto</li>
+                    <li>Com latência previsível</li>
+                </ul>
+                <p>Conectividade é melhoria, não dependência vital.</p>
+            </div>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">7</div>
+            <h3>Performance é Feature Central</h3>
+            <div class="principle-content">
+                <ul>
+                    <li>Tempo de resposta importa</li>
+                    <li>Consumo de memória importa</li>
+                    <li>Previsibilidade importa</li>
+                </ul>
+                <p>Nenhuma funcionalidade é aceita se comprometer estabilidade ou performance global.</p>
+            </div>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">8</div>
+            <h3>Complexidade Interna, Simplicidade Externa</h3>
+            <div class="principle-content">
+                <p>Mobroh aceita complexidade apenas internamente. Externamente:</p>
+                <ul>
+                    <li>APIs simples</li>
+                    <li>Contratos estáveis</li>
+                    <li>Comportamento consistente</li>
+                </ul>
+                <p>Mudanças internas nunca devem quebrar expectativas do utilizador.</p>
+            </div>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">9</div>
+            <h3>Dados e Confiança</h3>
+            <div class="principle-content">
+                <ul>
+                    <li>Dados sensíveis são tratados localmente</li>
+                    <li>Tudo é auditável</li>
+                    <li>Nada é enviado sem necessidade explícita</li>
+                </ul>
+                <div class="highlight-box">
+                    Confiança é construída por design, não por promessa.
+                </div>
+            </div>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">10</div>
+            <h3>Automação Invisível</h3>
+            <div class="principle-content">
+                <p>A melhor automação é a que não parece automação.</p>
+                <p>Se o utilizador percebe que algo foi automatizado, deve ser porque ganhou tempo, não porque perdeu controle.</p>
+            </div>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">11</div>
+            <h3>Sem Dependências Críticas Ocultas</h3>
+            <div class="principle-content">
+                <p>Mobroh evita:</p>
+                <ul>
+                    <li>APIs externas como núcleo</li>
+                    <li>Custos operacionais contínuos obrigatórios</li>
+                    <li>Serviços que podem desaparecer</li>
+                </ul>
+                <p>Quando dependências existem, devem ser substituíveis.</p>
+            </div>
+        </div>
+
+        <div class="principle">
+            <div class="principle-number">12</div>
+            <h3>Produto Não é Moda</h3>
+            <div class="principle-content">
+                <p>Mobroh não segue tendências.</p>
+                <ul>
+                    <li>Não otimiza para buzz</li>
+                    <li>Não otimiza para pitch</li>
+                    <li>Não otimiza para demo impressionante</li>
+                </ul>
+                <p>O objetivo é longevidade.</p>
+            </div>
+        </div>
+
+        <div class="principle final-rule">
+            <div class="principle-number">13</div>
+            <h3>Regra Final</h3>
+            <div class="principle-content">
+                <p>Se uma decisão técnica, de produto ou comercial violar qualquer ponto deste documento, a decisão está errada.</p>
+                <p>Mesmo que:</p>
+                <ul>
+                    <li>seja mais rápida</li>
+                    <li>seja mais barata no curto prazo</li>
+                    <li>pareça mais competitiva</li>
+                </ul>
+                <div class="highlight-box">
+                    <strong>Mobroh escolhe consistência antes de crescimento acelerado.</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="closing">
+            <p>Mobroh não quer ser poderosa.</p>
+            <p>Quer ser <strong>útil, confiável e silenciosamente eficiente</strong>.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-tagline">Mobroh desenvolve ferramentas para apoiar pessoas, não para substituí-las.</p>
+    </footer>
+</body>
+</html>

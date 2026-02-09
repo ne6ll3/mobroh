@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Responsabilidade – Mobroh</title>
+    <style>
+        :root {
+            --primary-blue: #2E5FCC;
+            --secondary-blue: #4A90E2;
+            --accent-teal: #14B8A6;
+            --dark-navy: #1E3A5F;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --bg-light: #F7FAFC;
+            --border-light: #E2E8F0;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--white);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 2rem 0;
+            border-bottom: 4px solid var(--accent-teal);
+        }
+        
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .logo-container {
+            flex-shrink: 0;
+        }
+        
+        .logo-container svg {
+            width: 80px;
+            height: 80px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+        }
+        
+        .header-text h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 0.9rem;
+            font-weight: 400;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .document-header {
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--primary-blue);
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .document-header h2 {
+            color: var(--dark-navy);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .meta-info {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .meta-info span {
+            display: inline-block;
+            margin-right: 2rem;
+        }
+        
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h3 {
+            color: var(--dark-navy);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-teal);
+            display: inline-block;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Lists Styling */
+        .responsibility-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .responsibility-list li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .responsibility-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
+            font-weight: bold;
+        }
+        
+        .limitation-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .limitation-list li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .limitation-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
+            font-weight: bold;
+        }
+        
+        .critical-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .critical-list li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .critical-list li::before {
+            content: "✕";
+            position: absolute;
+            left: 0;
+            color: #E53E3E;
+            font-weight: bold;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #EDF2F7 100%);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .highlight-box strong {
+            color: var(--primary-blue);
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #FFF5F5 0%, #FED7D7 100%);
+            border: 1px solid #FC8181;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .warning-box strong {
+            color: #C53030;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-tagline {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            main {
+                padding: 2rem 1.5rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            header {
+                background: white !important;
+                color: black !important;
+                border-bottom: 2px solid #333;
+            }
+            
+            .logo-container svg {
+                filter: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <svg viewBox="90 85 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="blueGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#2E5FCC;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="blueGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#5B9FED;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3D7BD9;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#2DD4BF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(150, 150)">
+                        <path d="M -40 30 L 0 50 L 40 30 L 0 10 Z" fill="url(#greenGrad)" opacity="0.9"/>
+                        <path d="M -50 0 L -10 20 L 30 0 L -10 -20 Z" fill="url(#blueGrad1)" opacity="0.85"/>
+                        <path d="M 10 0 L 50 20 L 50 -20 L 10 -40 Z" fill="url(#blueGrad2)" opacity="0.85"/>
+                        <circle cx="0" cy="-45" r="8" fill="url(#blueGrad1)"/>
+                        <path d="M -3 -45 L 0 -60 L 3 -45" fill="url(#blueGrad2)" stroke="none"/>
+                        <line x1="-35" y1="15" x2="0" y2="-30" stroke="url(#blueGrad1)" stroke-width="2" opacity="0.4"/>
+                        <line x1="35" y1="15" x2="0" y2="-30" stroke="url(#blueGrad2)" stroke-width="2" opacity="0.4"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="header-text">
+                <h1>Mobroh</h1>
+                <p class="tagline">Confiança e Transparência</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="document-header">
+            <h2>Termos de Responsabilidade</h2>
+            <div class="meta-info">
+                <span><strong>Versão:</strong> 1.0</span>
+                <span><strong>Última atualização:</strong> [data]</span>
+            </div>
+        </div>
+
+        <p class="intro-text">
+            Os presentes Termos de Responsabilidade estabelecem os limites de responsabilidade relativos à utilização dos sistemas, ferramentas e plataformas desenvolvidas pela Mobroh, em complemento à Política de Uso. Estes termos existem para garantir transparência, segurança jurídica e alinhamento entre expectativas técnicas e uso real.
+        </p>
+
+        <section>
+            <h3>1. Natureza do Serviço</h3>
+            <p>Os sistemas Mobroh são ferramentas de apoio, concebidas para auxiliar utilizadores humanos em tarefas de organização, análise, automação e consulta de informação.</p>
+            <ul class="responsibility-list">
+                <li>Não operam como sistemas autónomos de decisão.</li>
+                <li>Não substituem profissionais qualificados.</li>
+                <li>Não assumem responsabilidade por decisões finais tomadas pelo utilizador.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>2. Responsabilidade do Utilizador</h3>
+            <p>O utilizador reconhece e aceita que:</p>
+            <ul class="responsibility-list">
+                <li>É o responsável final por qualquer decisão, ação ou omissão baseada nas informações fornecidas pelo sistema.</li>
+                <li>Deve validar resultados antes de uso em contextos críticos.</li>
+                <li>Não deve confiar cegamente em respostas automáticas.</li>
+                <li>É responsável pela correta interpretação dos resultados apresentados.</li>
+            </ul>
+            <div class="warning-box">
+                <strong>Nota importante:</strong> A Mobroh não pode ser responsabilizada por consequências decorrentes do uso inadequado ou acrítico do sistema.
+            </div>
+        </section>
+
+        <section>
+            <h3>3. Limitações Técnicas Declaradas</h3>
+            <p>O utilizador aceita que os sistemas Mobroh:</p>
+            <ul class="limitation-list">
+                <li>Possuem limitações de compreensão linguística e contextual.</li>
+                <li>Podem apresentar falhas, omissões ou respostas incompletas.</li>
+                <li>Dependem de configuração, dados fornecidos e ensino inicial.</li>
+            </ul>
+            <div class="highlight-box">
+                Essas limitações são conhecidas, documentadas e intencionais, visando previsibilidade e segurança.
+            </div>
+        </section>
+
+        <section>
+            <h3>4. Exclusão de Responsabilidade por Decisões Críticas</h3>
+            <p>A Mobroh não assume responsabilidade por decisões críticas, incluindo, mas não se limitando a:</p>
+            <ul class="critical-list">
+                <li>Diagnósticos médicos</li>
+                <li>Decisões legais ou judiciais</li>
+                <li>Avaliações financeiras ou fiscais</li>
+                <li>Decisões pedagógicas finais</li>
+                <li>Qualquer decisão que exija julgamento profissional regulamentado</li>
+            </ul>
+            <div class="highlight-box">
+                O sistema pode fornecer apoio informativo, mas <strong>nunca</strong> decisão final.
+            </div>
+        </section>
+
+        <section>
+            <h3>5. Dados e Conformidade com RGPD</h3>
+            <p>A responsabilidade pela legalidade do tratamento de dados inseridos no sistema é da entidade ou utilizador que os fornece.</p>
+            <p>A Mobroh:</p>
+            <ul class="responsibility-list">
+                <li>Desenvolve sistemas segundo o princípio de <em>privacy by design</em></li>
+                <li>Não assume controlo sobre dados tratados localmente pelo utilizador</li>
+                <li>Não reutiliza dados para treino externo</li>
+            </ul>
+            <p>Cabe ao utilizador garantir:</p>
+            <ul class="limitation-list">
+                <li>Base legal para tratamento dos dados</li>
+                <li>Consentimento quando aplicável</li>
+                <li>Cumprimento de direitos dos titulares dos dados</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>6. Limitação de Garantias</h3>
+            <p>Os sistemas Mobroh são fornecidos <em>tal como estão</em> (<em>as is</em>), dentro das especificações documentadas.</p>
+            <p>A Mobroh não garante:</p>
+            <ul class="limitation-list">
+                <li>Ausência total de erros</li>
+                <li>Cobertura de todos os cenários possíveis</li>
+                <li>Resultados perfeitos ou completos</li>
+            </ul>
+            <div class="highlight-box">
+                A garantia limita-se ao funcionamento conforme descrito na documentação oficial.
+            </div>
+        </section>
+
+        <section>
+            <h3>7. Limitação de Responsabilidade</h3>
+            <p>Na máxima extensão permitida por lei, a Mobroh não será responsável por:</p>
+            <ul class="limitation-list">
+                <li>Danos indiretos ou consequenciais</li>
+                <li>Perda de dados causada por uso indevido</li>
+                <li>Decisões tomadas exclusivamente pelo utilizador</li>
+                <li>Interrupções causadas por fatores externos</li>
+            </ul>
+            <div class="highlight-box">
+                Esta limitação não se aplica a situações de dolo ou negligência grave comprovada, nos termos da lei aplicável.
+            </div>
+        </section>
+
+        <section>
+            <h3>8. Alterações aos Termos</h3>
+            <p>A Mobroh reserva-se o direito de atualizar estes Termos de Responsabilidade para:</p>
+            <ul class="responsibility-list">
+                <li>Adequação legal</li>
+                <li>Melhoria de clareza</li>
+                <li>Evolução controlada dos sistemas</li>
+            </ul>
+            <p>Alterações não modificarão a natureza fundamental dos sistemas nem reduzirão direitos legalmente garantidos aos utilizadores.</p>
+        </section>
+
+        <section>
+            <h3>9. Aceitação</h3>
+            <p>Ao utilizar qualquer sistema Mobroh, o utilizador declara que:</p>
+            <ul class="responsibility-list">
+                <li>Leu e compreendeu estes Termos de Responsabilidade</li>
+                <li>Aceita os limites aqui definidos</li>
+                <li>Concorda em utilizar o sistema de forma consciente e responsável</li>
+            </ul>
+            <div class="highlight-box">
+                O uso continuado constitui aceitação integral destes termos.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-tagline">Mobroh constrói ferramentas confiáveis. A responsabilidade final permanece humana.</p>
+    </footer>
+</body>
+</html>

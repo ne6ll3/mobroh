@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobroh — Ferramentas operacionais sob seu controlo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <svg viewBox="90 85 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="blueGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#2E5FCC;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="blueGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#5B9FED;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3D7BD9;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#2DD4BF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(150, 150)">
+                        <path d="M -40 30 L 0 50 L 40 30 L 0 10 Z" fill="url(#greenGrad)" opacity="0.9"/>
+                        <path d="M -50 0 L -10 20 L 30 0 L -10 -20 Z" fill="url(#blueGrad1)" opacity="0.85"/>
+                        <path d="M 10 0 L 50 20 L 50 -20 L 10 -40 Z" fill="url(#blueGrad2)" opacity="0.85"/>
+                        <circle cx="0" cy="-45" r="8" fill="url(#blueGrad1)"/>
+                        <path d="M -3 -45 L 0 -60 L 3 -45" fill="url(#blueGrad2)" stroke="none"/>
+                        <line x1="-35" y1="15" x2="0" y2="-30" stroke="url(#blueGrad1)" stroke-width="2" opacity="0.4"/>
+                        <line x1="35" y1="15" x2="0" y2="-30" stroke="url(#blueGrad2)" stroke-width="2" opacity="0.4"/>
+                    </g>
+                </svg>
+                <div class="logo-text">
+                    <h1>Mobroh</h1>
+                    <span>Confiança e Transparência</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#filosofia">Filosofia</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Ferramentas operacionais sob seu controlo</h2>
+            <p>Construímos sistemas que funcionam em qualquer infraestrutura, preservam seus dados e eliminam complexidade desnecessária. Começámos em Angola. Escalamos para onde a conectividade é desafio.</p>
+            <div class="cta-buttons">
+                <a href="#produtos" class="btn btn-primary">Conhecer produtos</a>
+                <a href="#filosofia" class="btn btn-secondary">Nossa abordagem</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="produtos">
+        <div class="product-category">
+            <span class="category-label label-production">Em Produção</span>
+            <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                <h3>O que já funciona</h3>
+                <p>Ferramentas validadas em contexto real, usadas por instituições concretas.</p>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card featured">
+                    <h4>Mobroh GS</h4>
+                    <span class="subtitle">Game School</span>
+                    <p>Plataforma de gamificação educacional que conecta professores e alunos através de mecânicas de jogo. Gestão pedagógica sem burocracia pesada.</p>
+                    <ul class="product-features">
+                        <li>+500 professores em Angola</li>
+                        <li>Funciona 100% offline</li>
+                        <li>Multiplayer local via Bluetooth</li>
+                        <li>Relatórios de progresso exportáveis</li>
+                    </ul>
+                    <a href="https://mobroh-gs.pages.dev" class="product-link" target="_blank">Explorar GS →</a>
+                </div>
+                
+                <div class="product-card featured">
+                    <h4>Zila</h4>
+                    <span class="subtitle">Reino dos Números Perdidos</span>
+                    <p>Jogo educativo 3D onde matemática vira aventura. Alunos resolvem quebra-cabeças numéricos para progredir em mundos pixelados.</p>
+                    <ul class="product-features">
+                        <li>3 mundos: Savana, Deserto, Floresta</li>
+                        <li>Mecânica híbrida: Sokoban + Matemática</li>
+                        <li>Modo cooperativo para 2 jogadores</li>
+                        <li>Progresso sincronizável com GS</li>
+                    </ul>
+                    <a href="https://zila-game.pages.dev" class="product-link" target="_blank">Jogar Zila →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <span class="category-label label-development">Em Desenvolvimento</span>
+            <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                <h3>O que estamos a construir</h3>
+                <p>Inovação operacional em validação. Acesso disponível para parceiros de co-criação.</p>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <h4>Mobroh Nexus</h4>
+                    <span class="subtitle">Engine de Criação</span>
+                    <p>IDE para desenvolvimento de jogos com templates pré-configurados. Base onde construímos Zila e onde formamos novos criadores.</p>
+                    <ul class="product-features">
+                        <li>Templates: Explorer 3D, Platformer, Survival</li>
+                        <li>Characters e animações prontos</li>
+                        <li>Exportação multiplataforma</li>
+                        <li>Base de formação Commos</li>
+                    </ul>
+                    <a href="https://mobroh-nexus-game.pages.dev" class="product-link" target="_blank">Ver Nexus →</a>
+                </div>
+                
+                <div class="product-card">
+                    <h4>Mobroh SGE</h4>
+                    <span class="subtitle">Sistema de Gestão Escolar — Utopic v0.2</span>
+                    <p>Gestão administrativa e académica modular. Secretaria, avaliações, transporte e uniformes integrados sob controlo da instituição.</p>
+                    <ul class="product-features">
+                        <li>Módulos independentes e integrados</li>
+                        <li>Dados locais por defeito</li>
+                        <li>Configuração granular por instituição</li>
+                        <li>Validação operacional em curso</li>
+                    </ul>
+                    <a href="https://mobroh-sge-utopic-v0-2.pages.dev" class="product-link" target="_blank">Ver exemplar técnico →</a>
+                </div>
+                
+                <div class="product-card">
+                    <h4>Mobroh Commos</h4>
+                    <span class="subtitle">Comunidade de Formação</span>
+                    <p>Espaço de aprendizagem prática para desenvolvedores. Fullstack, Mobile e Desktop através da criação de serviços reais.</p>
+                    <ul class="product-features">
+                        <li>Formação por projectos reais</li>
+                        <li>Desenvolvimento de serviços Mobroh</li>
+                        <li>Mentoria técnica contínua</li>
+                        <li>Nova plataforma em breve</li>
+                    </ul>
+                    <span style="color: var(--text-secondary); font-size: 0.9rem; font-style: italic;">Refatoração interna em curso</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="philosophy" id="filosofia">
+        <div class="philosophy-content">
+            <h3>Por que diferente</h3>
+            <p>Não vendemos "soluções inovadoras". Construímos ferramentas que funcionam nas condições reais de infraestrutura — e permanecem sob seu controlo.</p>
+            
+            <div class="principles-grid">
+                <div class="principle-item">
+                    <h4>Controlo Total</h4>
+                    <p>Seus dados permanecem locais. Sua lógica é auditável. Sua infraestrutura não depende da nossa permanência.</p>
+                </div>
+                
+                <div class="principle-item">
+                    <h4>Fluidez Operacional</h4>
+                    <p>Reduzimos cliques, interrupções e decisões repetitivas. Tecnologia que desaparece no uso, não que compete por atenção.</p>
+                </div>
+                
+                <div class="principle-item">
+                    <h4>Transparência</h4>
+                    <p>Cada decisão automatizada é rastreável. Cada falha é visível e recuperável. Não há comportamento opaco.</p>
+                </div>
+                
+                <div class="principle-item">
+                    <h4>Acessibilidade Real</h4>
+                    <p>Funciona em hardware modesto. Opera sem internet. Não requer formação especializada para começar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>Produtos</h5>
+                <ul>
+                    <li><a href="https://mobroh-gs.pages.dev" target="_blank">Mobroh GS</a></li>
+                    <li><a href="https://zila-game.pages.dev" target="_blank">Zila</a></li>
+                    <li><a href="https://mobroh-nexus-game.pages.dev" target="_blank">Nexus</a></li>
+                    <li><a href="https://mobroh-sge-utopic-v0-2.pages.dev" target="_blank">SGE Utopic</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h5>Documentação</h5>
+                <ul>
+                    <li><a href="#">Doutrinas Mobroh</a></li>
+                    <li><a href="#">Política de Uso</a></li>
+                    <li><a href="#">Arquitetura de Privacidade</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h5>Contacto</h5>
+                <ul>
+                    <li><a href="mailto:geral@mobroh.pt">geral@mobroh.pt</a></li>
+                    <li><a href="mailto:suporte@mobroh.pt">suporte@mobroh.pt</a></li>
+                    <li>Angola</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Mobroh. Todos os direitos reservados.</p>
+            <p class="footer-tagline">Ferramentas para apoiar pessoas, não para substituí-las.</p>
+        </div>
+    </footer>
+</body>
+</html>

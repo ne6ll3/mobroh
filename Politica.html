@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobroh - Confiança e Transparência</title>
+    <style>
+        :root {
+            --primary-blue: #2E5FCC;
+            --secondary-blue: #4A90E2;
+            --accent-teal: #14B8A6;
+            --dark-navy: #1E3A5F;
+            --text-primary: #2D3748;
+            --text-secondary: #4A5568;
+            --bg-light: #F7FAFC;
+            --border-light: #E2E8F0;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--white);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 2rem 0;
+            border-bottom: 4px solid var(--accent-teal);
+        }
+        
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .logo-container {
+            flex-shrink: 0;
+        }
+        
+        .logo-container svg {
+            width: 80px;
+            height: 80px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+        }
+        
+        .header-text h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.1rem;
+            font-weight: 400;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .document-header {
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--primary-blue);
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .document-header h2 {
+            color: var(--dark-navy);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .meta-info {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .meta-info span {
+            display: inline-block;
+            margin-right: 2rem;
+        }
+        
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h3 {
+            color: var(--dark-navy);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-teal);
+            display: inline-block;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Lists Styling */
+        .feature-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .feature-list li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
+            font-weight: bold;
+        }
+        
+        .prohibited-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .prohibited-list li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .prohibited-list li::before {
+            content: "✕";
+            position: absolute;
+            left: 0;
+            color: #E53E3E;
+            font-weight: bold;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #EDF2F7 100%);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .highlight-box strong {
+            color: var(--primary-blue);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-tagline {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            main {
+                padding: 2rem 1.5rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            header {
+                background: white !important;
+                color: black !important;
+                border-bottom: 2px solid #333;
+            }
+            
+            .logo-container svg {
+                filter: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <svg viewBox="90 85 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="blueGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#2E5FCC;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="blueGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#5B9FED;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3D7BD9;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#2DD4BF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(150, 150)">
+                        <path d="M -40 30 L 0 50 L 40 30 L 0 10 Z" fill="url(#greenGrad)" opacity="0.9"/>
+                        <path d="M -50 0 L -10 20 L 30 0 L -10 -20 Z" fill="url(#blueGrad1)" opacity="0.85"/>
+                        <path d="M 10 0 L 50 20 L 50 -20 L 10 -40 Z" fill="url(#blueGrad2)" opacity="0.85"/>
+                        <circle cx="0" cy="-45" r="8" fill="url(#blueGrad1)"/>
+                        <path d="M -3 -45 L 0 -60 L 3 -45" fill="url(#blueGrad2)" stroke="none"/>
+                        <line x1="-35" y1="15" x2="0" y2="-30" stroke="url(#blueGrad1)" stroke-width="2" opacity="0.4"/>
+                        <line x1="35" y1="15" x2="0" y2="-30" stroke="url(#blueGrad2)" stroke-width="2" opacity="0.4"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="header-text">
+                <h1>Mobroh</h1>
+                <p class="tagline">Confiança e Transparência</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="document-header">
+            <h2>Política de Uso</h2>
+            <div class="meta-info">
+                <span><strong>Versão:</strong> 1.0</span>
+                <span><strong>Última atualização:</strong> 09/02/2026</span>
+            </div>
+        </div>
+
+        <p class="intro-text">
+            Esta Política de Uso define as condições de utilização dos sistemas, ferramentas e plataformas desenvolvidas pela Mobroh. O objetivo é estabelecer expectativas claras, limites operacionais e responsabilidades, garantindo uso seguro, eficiente e alinhado com os princípios de transparência, confiança e conformidade legal.
+        </p>
+
+        <section>
+            <h3>1. Natureza dos Sistemas Mobroh</h3>
+            <p>Os sistemas Mobroh são ferramentas de apoio operacional e cognitivo leve.</p>
+            <ul class="feature-list">
+                <li>Não são sistemas de inteligência artificial geral</li>
+                <li>Não simulam pensamento humano</li>
+                <li>Não substituem julgamento profissional, técnico, médico, pedagógico ou jurídico</li>
+            </ul>
+            <p>Utilizam automação, regras determinísticas e reconhecimento superficial de padrões para reduzir esforço, tempo e carga cognitiva em tarefas recorrentes.</p>
+        </section>
+
+        <section>
+            <h3>2. Uso Pretendido</h3>
+            <p>Os sistemas Mobroh destinam-se a:</p>
+            <ul class="feature-list">
+                <li>Organização de informação</li>
+                <li>Apoio à tomada de decisão humana</li>
+                <li>Automação de tarefas repetitivas</li>
+                <li>Consulta estruturada de dados</li>
+                <li>Assistência contextual em domínios fechados</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Exemplos de domínios adequados:</strong> Educação, Saúde (apoio administrativo e organizacional), Escritórios técnicos e administrativos, Ambientes institucionais com dados sensíveis.
+            </div>
+        </section>
+
+        <section>
+            <h3>3. Limitações Conhecidas</h3>
+            <p>O utilizador reconhece e aceita que os sistemas Mobroh:</p>
+            <ul class="feature-list">
+                <li>Possuem compreensão linguística limitada</li>
+                <li>Podem falhar em frases ambíguas, indiretas ou complexas</li>
+                <li>Dependem de configuração, ensino inicial e validação humana</li>
+                <li>Não garantem cobertura total de todos os cenários possíveis</li>
+            </ul>
+            <p>Quando ocorre ambiguidade ou falha, o sistema pode solicitar esclarecimento ou não fornecer resposta.</p>
+        </section>
+
+        <section>
+            <h3>4. Responsabilidade do Utilizador</h3>
+            <p>O utilizador compromete-se a:</p>
+            <ul class="feature-list">
+                <li>Utilizar o sistema apenas para fins legítimos</li>
+                <li>Validar resultados antes de qualquer decisão crítica</li>
+                <li>Não delegar decisões finais exclusivamente ao sistema</li>
+                <li>Garantir que os dados inseridos são corretos e autorizados</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Nota importante:</strong> O utilizador é o responsável final por qualquer ação tomada com base nas informações fornecidas pelo sistema.
+            </div>
+        </section>
+
+        <section>
+            <h3>5. Usos Proibidos</h3>
+            <p>É expressamente proibido utilizar sistemas Mobroh para:</p>
+            <ul class="prohibited-list">
+                <li>Tomada automática de decisões críticas sem supervisão humana</li>
+                <li>Substituição de profissionais habilitados</li>
+                <li>Vigilância ilegal ou não autorizada</li>
+                <li>Tratamento de dados sem base legal</li>
+                <li>Geração ou disseminação de informação enganosa</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>6. Dados e Privacidade (RGPD)</h3>
+            <p>Os sistemas Mobroh são concebidos segundo o princípio <em>privacy by design</em>.</p>
+            <ul class="feature-list">
+                <li>O tratamento de dados ocorre, preferencialmente, de forma local</li>
+                <li>Não há envio automático de dados para terceiros</li>
+                <li>Dados sensíveis permanecem sob controlo da entidade utilizadora</li>
+                <li>O utilizador é responsável por garantir base legal para os dados tratados</li>
+            </ul>
+            <div class="highlight-box">
+                A Mobroh não utiliza dados dos utilizadores para treino de modelos externos.
+            </div>
+        </section>
+
+        <section>
+            <h3>7. Registos e Auditoria</h3>
+            <p>Sempre que aplicável, os sistemas Mobroh podem manter:</p>
+            <ul class="feature-list">
+                <li>Registos de alterações</li>
+                <li>Histórico de aprendizagem contextual</li>
+                <li>Trilhas de auditoria</li>
+            </ul>
+            <p>Esses registos existem para garantir transparência, rastreabilidade e correção de erros.</p>
+        </section>
+
+        <section>
+            <h3>8. Atualizações e Evolução</h3>
+            <p>A Mobroh pode atualizar os sistemas para:</p>
+            <ul class="feature-list">
+                <li>Correção de falhas</li>
+                <li>Melhoria de desempenho</li>
+                <li>Ajustes de segurança</li>
+            </ul>
+            <p>Tais atualizações não devem alterar a natureza fundamental do sistema nem introduzir comportamento opaco ou não auditável.</p>
+        </section>
+
+        <section>
+            <h3>9. Aceitação</h3>
+            <p>Ao utilizar qualquer sistema Mobroh, o utilizador declara que:</p>
+            <ul class="feature-list">
+                <li>Leu e compreendeu esta Política de Uso</li>
+                <li>Reconhece as limitações descritas</li>
+                <li>Concorda com os termos aqui estabelecidos</li>
+            </ul>
+            <div class="highlight-box">
+                O uso continuado do sistema constitui aceitação integral desta política.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-tagline">Mobroh desenvolve ferramentas para apoiar pessoas, não para substituí-las.</p>
+    </footer>
+</body>
+</html>
